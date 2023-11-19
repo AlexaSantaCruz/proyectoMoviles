@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registro de serie"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"/>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:columnCount="2"
+        android:layout_margin="15dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:hint="@string/nombreSerie"
+            android:inputType="textPersonName"
+            android:textSize="20dp" />
+
+
+
+
+        <CheckBox
+            android:id="@+id/checkBoxAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Finalicé esta serie"
+            android:textSize="20dp"
+            android:layout_margin="15dp"
+            android:layout_columnSpan="2"
+            android:layout_marginLeft="90dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Recomendacion de:"
+
+            />
+
+
+        <RadioGroup
+            android:id="@+id/recomendation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RadioButton
+                android:id="@+id/radioButtonMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amigos"
+                android:textSize="15dp"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Familia"
+                android:textSize="15dp"/>
+
+
+            <RadioButton
+                android:id="@+id/radioButtonConocidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conocidos"
+                android:textSize="15dp"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonOtros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Otros"
+                android:textSize="15dp"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonYo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yo"
+                android:textSize="15dp"/>
+
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Género"/>
+
+        <Spinner
+            android:id="@+id/genreSerie"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="16dp"
+            android:entries="@array/generos_series"
+            android:scrollbarSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Solicitar notificaciones"/>
+
+
+        <ToggleButton
+            android:id="@+id/notifications"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            />
+
+
+    </GridLayout>
+
+
+
+    <Button
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/registrarse"
+        android:onClick="register"
+        />
+
+    <Button
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicio de Sesion"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/inicioSesion"
+        android:onClick="login"
+        />
+
+
+</LinearLayout>
+
+</ScrollView>

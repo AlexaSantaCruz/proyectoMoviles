@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="generos_series">
+        <item>Acción</item>
+        <item>Aventura</item>
+        <item>Comedia</item>
+        <item>Drama</item>
+        <item>Fantasía</item>
+        <item>Terror</item>
+        <item>Misterio</item>
+        <item>Romance</item>
+        <item>Ciencia Ficción</item>
+        <item>Suspenso</item>
+    </string-array>
+
+    <string-array name="series_array">
+        <item>Breaking Bad</item>
+        <item>Stranger Things</item>
+        <item>The Mandalorian</item>
+        <item>The Office</item>
+        <item>Sherlock</item>
+        <item>The Mentalist</item>
+        <item>What if</item>
+        <item>Moon Knight</item>
+        <item>Attack On titan</item>
+        <item>Malcom In The Middle</item>
+        <item>Lego Monkie Kid</item>
+        <item>Banana Fish</item>
+        <item>Our Flag Means Death</item>
+        <item>Good Omens</item>
+        <item>Hannibal</item>
+        <!-- Agregar aquí más series si es necesario-->
+    </string-array>
+
+</resources>
