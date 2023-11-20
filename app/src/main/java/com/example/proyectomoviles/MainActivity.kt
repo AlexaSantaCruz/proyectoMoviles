@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = viewPagerAdapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            // Customize tab text or behavior if needed
             tab.text = viewPagerAdapter.getPageTitle(position)
         }.attach()
     }

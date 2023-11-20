@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".RegistroActivity"
+        tools:context=".LoginFragment"
         android:orientation="vertical">
 
 
@@ -26,10 +26,11 @@
             android:layout_margin="30dp"/>
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
             android:columnCount="2"
-            android:layout_margin="15dp">
+            android:layout_margin="15dp"
+            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -134,38 +135,65 @@
                 android:textSize="20dp"
                 android:text="Solicitar notificaciones"/>
 
+
             <ToggleButton
                 android:id="@+id/notifications"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 />
 
 
         </GridLayout>
 
 
-
         <Button
-            android:layout_margin="15dp"
+            android:id="@+id/ingresarFoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Registrarse"
-            android:textSize="20dp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:id="@+id/registrarse"
-            android:onClick="register"
-            />
+            android:text="ingresar foto"
+            android:layout_gravity="center"/>
 
+        <ImageView
+            android:id="@+id/guardarFoto"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/iconoapplication"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            />
         <Button
-            android:layout_margin="15dp"
+            android:id="@+id/activity_main_adialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Inicio de Sesion"
-            android:textSize="15dp"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:id="@+id/inicioSesion"
-            android:onClick="login"
+            android:layout_marginBottom="5dp"
+            android:text="Recordatorios cada?"/>
+
+        <Button
+            android:id="@+id/activity_main_tpdialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Hora del recordatorio"/>
+
+        <Button
+            android:id="@+id/activity_main_dpdialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Fecha de inicio del recordatorio"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:id="@+id/guardar"
+            android:layout_gravity="center"
+            android:onClick="save"
+            android:layout_marginBottom="150dp"
             />
+
+
 
 
     </LinearLayout>
