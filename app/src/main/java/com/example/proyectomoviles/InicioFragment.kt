@@ -2,13 +2,19 @@ package com.example.proyectomoviles
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
 class InicioFragment : Fragment() {
+
+    private val sharedViewModel: SharedViewModel by activityViewModels()
+
+
     private lateinit var names: MutableList<String>
     private lateinit var miRecyclerView: RecyclerView
     private lateinit var miAdapter: MyAdapter
@@ -17,17 +23,16 @@ class InicioFragment : Fragment() {
     private val PREFS_NAME = "MyPrefs"
     private val SERIES_KEY = "seriesKey"
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_inicio, container, false)
-
         names = getAllNames()
 
         names = loadNamesFromSharedPreferences()
-
 
         miRecyclerView = view.findViewById(R.id.recyclerView)
         miLayoutManager = LinearLayoutManager(activity)
@@ -42,6 +47,17 @@ class InicioFragment : Fragment() {
         miRecyclerView.adapter = miAdapter
 
         setHasOptionsMenu(true)  // Indicar que el fragment tiene opciones de menú
+
+        parentFragmentManager.setFragmentResultListener("requestKey", this) { key, bundle ->
+            val receivedUserData = bundle.getParcelable<UserData>("userData")
+
+            receivedUserData?.let {
+                // Agrega los datos recibidos a tu lista de nombres y actualiza el RecyclerView
+                names.add(it.nombreSerie)
+
+                miAdapter.notifyItemInserted(names.size - 1)
+            }
+        }
 
         return view
     }
@@ -79,6 +95,8 @@ class InicioFragment : Fragment() {
     }
 
     private fun addName(posicion: Int) {
+        Log.d("InicioFragment", "names: $names")
+
         names.add(posicion, "New name" + (++counter))
         miAdapter.notifyItemInserted(posicion)
         miLayoutManager.scrollToPosition(posicion)

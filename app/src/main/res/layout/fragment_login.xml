@@ -40,6 +40,7 @@
                 />
 
             <EditText
+                android:id="@+id/nombreSerieEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
@@ -189,7 +190,7 @@
             android:text="Guardar"
             android:id="@+id/guardar"
             android:layout_gravity="center"
-            android:onClick="save"
+            android:onClick="saveData"
             android:layout_marginBottom="150dp"
             />
 
