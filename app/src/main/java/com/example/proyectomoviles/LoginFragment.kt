@@ -11,6 +11,7 @@ import android.os.Parcelable
 import android.provider.MediaStore
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
@@ -27,6 +28,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 
 import androidx.lifecycle.ViewModel
+import androidx.viewpager2.widget.ViewPager2
 
 class SharedViewModel : ViewModel() {
     var userData: UserData? = null
@@ -189,6 +191,10 @@ class LoginFragment : Fragment() {
 
         sharedViewModel.userData = userData
         parentFragmentManager.setFragmentResult("requestKey", bundleOf("userData" to userData))
+
+                    // Cambia al tercer fragmento (Registro de Series)
+                    val viewPager = (requireActivity() as MainActivity).findViewById<ViewPager2>(R.id.view_pager)
+                    viewPager.currentItem = 0
 
 
 

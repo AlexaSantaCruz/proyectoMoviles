@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Contenedor principal que contiene el RecyclerView y posiblemente otros elementos UI -->
+    
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

@@ -25,7 +25,7 @@
         android:layout_gravity="center"
         android:layout_margin="30dp"/>
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:columnCount="2"
@@ -39,16 +39,15 @@
             android:textAlignment="center"
             />
 
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_row="0"
             android:layout_margin="10dp"
             android:hint="@string/nombreSerie"
             android:inputType="textPersonName"
             android:textSize="20dp" />
-
-
-
 
         <CheckBox
             android:id="@+id/checkBoxAccept"
@@ -129,19 +128,6 @@
             android:entries="@array/generos_series"
             android:scrollbarSize="20dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Solicitar notificaciones"/>
-
-
-        <ToggleButton
-            android:id="@+id/notifications"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            />
-
 
     </GridLayout>
 
@@ -162,27 +148,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="20dp"
         />
-    <Button
-        android:id="@+id/activity_main_adialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="5dp"
-        android:text="Recordatorios cada?"/>
-
-    <Button
-        android:id="@+id/activity_main_tpdialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Hora del recordatorio"/>
-
-    <Button
-        android:id="@+id/activity_main_dpdialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Fecha de inicio del recordatorio"/>
+   >
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -190,7 +156,7 @@
         android:id="@+id/guardar"
         android:layout_gravity="center"
         android:onClick="save"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="100dp"
         />
 
 
