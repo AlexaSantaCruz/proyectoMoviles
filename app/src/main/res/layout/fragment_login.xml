@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".LoginFragment"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/coolerOrange">
 
 
 
@@ -141,7 +142,8 @@
                 android:id="@+id/notifications"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                />
+                android:background="@color/toggle_button_colors"
+            />
 
 
         </GridLayout>
@@ -152,7 +154,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ingresar foto"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:background="@color/orange"/>
 
         <ImageView
             android:id="@+id/guardarFoto"
@@ -172,6 +175,7 @@
             android:layout_gravity="center"
             android:onClick="saveData"
             android:layout_marginBottom="150dp"
+            android:background="@color/yellow"
             />
 
 

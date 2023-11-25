@@ -12,7 +12,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BuscadorFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/coolerOrange">
 
 
     <TextView
@@ -40,120 +41,145 @@
         android:id="@+id/series"
         />
 
-    <CheckBox
-        android:id="@+id/checkBoxFinalizar"
+    <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Finalicé esta serie"
-        android:textSize="20dp"
-        android:layout_margin="15dp"
-        android:layout_columnSpan="2"
-        android:layout_marginLeft="90dp"/>
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Recomendacion de:"
-        />
-
-
-    <RadioGroup
-        android:id="@+id/recomendation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:columnCount="2"
+        android:layout_gravity="center"
         >
 
-        <RadioButton
-            android:id="@+id/radioButtonMale"
+        <CheckBox
+            android:id="@+id/checkBoxFinalizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amigos"
-            android:textSize="15dp"/>
+            android:gravity="center"
+            android:text="Finalicé esta serie"
+            android:textSize="20dp"
+            android:layout_margin="15dp"
+            android:layout_columnSpan="2"
+            android:layout_marginLeft="70dp"/>
 
-        <RadioButton
-            android:id="@+id/radioButtonFemale"
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Familia"
-            android:textSize="15dp"/>
+            android:textSize="20dp"
+            android:text="Recomendacion de:"
+            />
 
 
-        <RadioButton
-            android:id="@+id/radioButtonConocidos"
+        <RadioGroup
+            android:id="@+id/recomendation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RadioButton
+                android:id="@+id/radioButtonMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amigos"
+                android:textSize="15dp"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Familia"
+                android:textSize="15dp"/>
+
+
+            <RadioButton
+                android:id="@+id/radioButtonConocidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conocidos"
+                android:textSize="15dp"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonOtros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Otros"
+                android:textSize="15dp"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonYo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yo"
+                android:textSize="15dp"/>
+
+        </RadioGroup>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Conocidos"
-            android:textSize="15dp"/>
+            android:textSize="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Género"/>
 
-        <RadioButton
-            android:id="@+id/radioButtonOtros"
+        <Spinner
+            android:id="@+id/genreSerie"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="16dp"
+            android:entries="@array/generos_series"
+            android:scrollbarSize="20dp" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Otros"
-            android:textSize="15dp"/>
+            android:textSize="20dp"
+            android:text="Solicitar notificaciones"/>
 
-        <RadioButton
-            android:id="@+id/radioButtonYo"
-            android:layout_width="wrap_content"
+
+        <ToggleButton
+            android:id="@+id/recibirNotificacion"
             android:layout_height="wrap_content"
-            android:text="Yo"
-            android:textSize="15dp"/>
-
-    </RadioGroup>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:layout_marginTop="16dp"
-        android:text="Género"/>
-
-    <Spinner
-        android:id="@+id/genreSerie"
-        android:layout_width="match_parent"
-        android:layout_height="26dp"
-        android:layout_marginTop="16dp"
-        android:entries="@array/generos_series"
-        android:scrollbarSize="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Solicitar notificaciones"/>
-
-
-    <ToggleButton
-        android:id="@+id/recibirNotificacion"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/toggle_button_colors"
         />
 
+
+
+
+    </GridLayout>
     <Button
+        android:layout_marginTop="10dp"
         android:id="@+id/activity_main_adialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="5dp"
-        android:text="Recordatorios cada?"/>
+        android:text="Recordatorios cada?"
+        android:background="@color/orange"/>
 
     <Button
+        android:layout_marginTop="10dp"
+
         android:id="@+id/activity_main_tpdialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Hora del recordatorio"/>
+        android:text="Hora del recordatorio"
+        android:background="@color/orange"/>
 
     <Button
+        android:layout_marginTop="10dp"
+
         android:id="@+id/activity_main_dpdialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Fecha de inicio del recordatorio"/>
+        android:text="Fecha de inicio del recordatorio"
+        android:background="@color/orange"/>
+
+
     <Button
+        android:layout_marginTop="20dp"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guardar"
@@ -161,6 +187,7 @@
         android:layout_gravity="center"
         android:onClick="save"
         android:layout_marginBottom="150dp"
+        android:background="@color/green"
         />
 
 

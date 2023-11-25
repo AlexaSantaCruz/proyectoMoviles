@@ -49,7 +49,7 @@ class MyAdapter constructor(
 
             val isFavorite = favorites.contains(serie)
             // Muestra el estado de favoritos, por ejemplo, cambiando el color de fondo
-            itemView.setBackgroundColor(if (isFavorite) Color.YELLOW else Color.WHITE)
+            itemView.setBackgroundColor(if (isFavorite) Color.YELLOW else Color.parseColor("#FF7F50"))
 
 
         }

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="yellow">#f3cb04</color>
-    <color name="green">#6cb404</color>
+                <color name="coolerOrange">#FF7F50</color> <!-- Naranja claro -->
+                <color name="orange">#FF6347</color> <!-- Naranja oscuro -->
+                <color name="yellow">#FFD700</color> <!-- Amarillo claro -->
+                <color name="green">#98FB98</color> <!-- Verde claro -->
+                <color name="black">#000000</color> <!-- Negro -->
+                <color name="white">#FFFFFF</color> <!-- Blanco -->
 </resources>
